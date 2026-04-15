@@ -15,6 +15,7 @@ build/
 .venv/
 venv/
 env/
+backend/__pycache__/
 
 # ── OS ────────────────────────────────────────────────────────────────────────
 .DS_Store
@@ -30,4 +31,12 @@ desktop.ini
 # ── Misc ──────────────────────────────────────────────────────────────────────
 *.log
 *.pdf
-backend/__pycache__/
+*.pyc
+
+# ── Old/duplicate files ───────────────────────────────────────────────────────
+WhatsApp Image*
+photo.jpg
+index.html
+style.css
+script.js
+profile.jpg

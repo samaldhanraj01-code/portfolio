@@ -1,9 +1,10 @@
 # 🚀 Dhanraj Samal — Portfolio Website
 
-Personal portfolio website of **Dhanraj Samal**, an aspiring .NET & Software Developer from Ahmedabad, Gujarat.
+Personal portfolio of **Dhanraj Samal**, an aspiring .NET & Software Developer from Ahmedabad, Gujarat.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-38BDF8?style=for-the-badge)](https://dhanrajsamal.dev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/dhanraj-samal-627b73245)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/dhanraj-samal-627b73245)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail)](mailto:dhanrajsamal2002@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-25D366?style=flat-square&logo=whatsapp)](https://wa.me/919376495990)
 
 ---
 
@@ -11,19 +12,25 @@ Personal portfolio website of **Dhanraj Samal**, an aspiring .NET & Software Dev
 
 ```
 portfolio/
-├── index.html              # Main HTML — all sections
-├── style.css               # All styles + responsive CSS
-├── script.js               # Animations, typing effect, form handler
-├── profile.jpg             # Profile photo
-├── photo.jpg               # Resume photo
-├── .gitignore
-├── README.md
 │
-└── backend/                # FastAPI + Supabase backend
-    ├── main.py             # API routes
+├── 📄 README.md
+├── 📄 .gitignore
+│
+├── 🌐 frontend/
+│   ├── index.html          # Main HTML — all sections
+│   ├── style.css           # Styles + full responsive CSS
+│   └── script.js           # Animations, typing, form handler
+│
+├── 🖼️ assets/
+│   └── images/
+│       ├── profile.jpg     # Main profile photo
+│       └── photo-resume.jpg
+│
+└── ⚙️ backend/
+    ├── main.py             # FastAPI app — API routes
     ├── requirements.txt    # Python dependencies
-    ├── .env.example        # Environment template (copy to .env)
-    ├── supabase_schema.sql # Database setup SQL
+    ├── .env.example        # Environment template
+    ├── supabase_schema.sql # Supabase DB setup SQL
     └── README.md           # Backend setup guide
 ```
 
@@ -31,67 +38,73 @@ portfolio/
 
 ## 🌐 Frontend
 
-Pure HTML, CSS, JavaScript — no frameworks.
+Pure **HTML + CSS + JavaScript** — zero frameworks, zero dependencies.
 
-**Features:**
-- Fully responsive (mobile, tablet, desktop, large screens)
-- Smooth scroll animations & reveal effects
-- Typing animation in hero section
-- Animated skill progress bars
-- Contact form connected to backend API
-- SEO optimized with Open Graph & Twitter Card meta tags
+| Feature | Details |
+|---------|---------|
+| Responsive | Mobile (320px) → Large Desktop (1400px+) |
+| Animations | Scroll reveal, typing effect, progress bars |
+| SEO | Open Graph, Twitter Card, meta tags |
+| Performance | No JS frameworks, optimized CSS |
+| Accessibility | ARIA labels, semantic HTML |
 
-**Sections:**
-1. Hero — Name, photo, typing animation, stats
-2. About — Bio, contact info card
-3. Skills — .NET, SQL, Java, JavaScript, C++, Soft Skills
-4. Experience — Timeline (Internship + Work history)
-5. Education — BCA, 12th, Certifications
-6. Contact — Form + Social links
+**Sections:** Hero · About · Skills · Experience · Education · Contact
 
 ---
 
-## ⚙️ Backend Setup
+## ⚙️ Backend
 
-### Requirements
-- Python 3.10+
-- Supabase account
+**FastAPI** + **Supabase** (PostgreSQL)
 
-### Steps
+### Quick Start
 
-**1. Install dependencies**
 ```bash
+# 1. Install dependencies
 cd backend
 pip install -r requirements.txt
-```
 
-**2. Setup environment**
-```bash
-cp backend/.env.example backend/.env
-# Fill in your Supabase URL and Key
-```
+# 2. Setup environment
+cp .env.example .env
+# Edit .env with your Supabase credentials
 
-**3. Setup Supabase database**
-- Go to [supabase.com](https://supabase.com) → Your Project → SQL Editor
-- Paste and run `backend/supabase_schema.sql`
+# 3. Setup database
+# Go to Supabase Dashboard → SQL Editor
+# Paste & run: backend/supabase_schema.sql
 
-**4. Run server**
-```bash
-cd backend
+# 4. Start server
 uvicorn main:app --reload
 ```
 
-Server: `http://localhost:8000`
+Server runs at: `http://localhost:8000`
+
+### API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/` | Health check |
+| `POST` | `/contact` | Submit contact form (rate limited: 5/min) |
 
 ---
 
 ## 🔒 Security
 
-- Rate limiting: 5 requests/minute per IP on `/contact`
-- Input validation & sanitization via Pydantic
-- CORS restricted to allowed origins
-- `.env` excluded from git via `.gitignore`
-- No sensitive keys in source code
+- ✅ Rate limiting — 5 requests/minute per IP
+- ✅ Input validation & sanitization (Pydantic)
+- ✅ CORS restricted to allowed origins
+- ✅ `.env` excluded from git
+- ✅ No hardcoded secrets in source code
+- ✅ SQL injection protected via Supabase client
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | HTML5, CSS3, Vanilla JS |
+| Backend | Python, FastAPI, Uvicorn |
+| Database | Supabase (PostgreSQL) |
+| Hosting | GitHub Pages (frontend) |
 
 ---
 
@@ -102,10 +115,9 @@ Server: `http://localhost:8000`
 | 📧 Email | dhanrajsamal2002@gmail.com |
 | 📱 Phone | +91 9376495990 |
 | 💼 LinkedIn | [dhanraj-samal-627b73245](https://www.linkedin.com/in/dhanraj-samal-627b73245) |
-| 💬 WhatsApp | [Chat Now](https://wa.me/919376495990) |
+| 💬 WhatsApp | [wa.me/919376495990](https://wa.me/919376495990) |
+| 📍 Location | Ahmedabad, Gujarat, India |
 
 ---
 
-## 📄 License
-
-This project is open source. Feel free to use it as a reference.
+© 2025 Dhanraj Samal. All rights reserved.
