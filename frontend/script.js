@@ -304,8 +304,8 @@ function startHeroAnimations() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  // Change this to your backend URL when deployed
-  const API_URL = 'http://localhost:8000';
+  // Backend API URL
+  const API_URL = 'https://portfolio-bhgy.onrender.com';
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
